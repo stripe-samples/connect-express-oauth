@@ -1,6 +1,6 @@
 {
   "name": "connect-express-oauth",
-  "configureDotEnv": true,
+  "configureDotEnv": false,
   "integrations": [
     {
       "name": "main",
