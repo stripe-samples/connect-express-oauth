@@ -43,15 +43,15 @@ $app->get('/get-oauth-link', function ($request, $response, $next) {
 
 $app->get('/authorize-oauth', function ($request, $response, $next) use ($app) {
   session_start();
-  extract($request->getQueryParams());
+
+  $state = $request->getQueryParam('state');
+  $code = $request->getQueryParam('code');
 
   // Assert the state matches the state you provided in the OAuth link (optional).
   if ($_SESSION['state'] != $state)
     return $response->withStatus(403)->withJson(array('error' => 'Incorrect state parameter: ' . $state . '   ' . $_SESSION['state']));
 
   // Send the authorization code to Stripe's API.
-  $code = $request->getQueryParam('code');
-
   try {
     $stripeResponse = \Stripe\OAuth::token([
       'grant_type' => 'authorization_code',
