@@ -3,11 +3,6 @@
 This Stripe sample shows you how to create a Connect [Express account](https://stripe.com/docs/connect/express-accounts) using OAuth.
 This is the first step if you want to [collect payments the pay out](https://stripe.com/docs/connect/collect-then-transfer-guide) or add funds manually to Stripe and [pay out money](https://stripe.com/docs/connect/add-and-pay-out-guide).
 
-Demo url: https://2be8j.sse.codesandbox.io
-
-Sandbox url: https://codesandbox.io/s/connect-express-oauth-2be8j
-(note: the Connect link won't work in the inline browser on codesandbox.io)
-
 ![demo](.readme/screenshot.png)
 
 ## How to run locally
