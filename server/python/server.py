@@ -38,8 +38,13 @@ def get_example():
 def construct_oauth_link():
     state = ''.join([secrets.choice(string.ascii_letters + string.digits) for n in range(16)])
     session['state'] = state
-    args = {"client_id": os.getenv('STRIPE_CLIENT_ID'), "state": state}
-    url = "https://connect.stripe.com/express/oauth/authorize?response_type=code&{}&scope=read_write".format(urllib.parse.urlencode(args))
+    args = {
+        "client_id": os.getenv('STRIPE_CLIENT_ID'),
+        "state": state,
+        "response_type": "code",
+        "scope": "read_write",
+    }
+    url = "https://connect.stripe.com/express/oauth/authorize?{}".format(urllib.parse.urlencode(args))
     return jsonify({'url': url})
 
 
