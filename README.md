@@ -1,7 +1,7 @@
 # Connect Express OAuth
 
 This Stripe sample shows you how to create a Connect [Express account](https://stripe.com/docs/connect/express-accounts) using OAuth.
-This is the first step if you want to [collect payments the pay out](https://stripe.com/docs/connect/collect-then-transfer-guide) or add funds manually to Stripe and [pay out money](https://stripe.com/docs/connect/add-and-pay-out-guide).
+This is the first step if you want to [collect payments then pay out](https://stripe.com/docs/connect/collect-then-transfer-guide) or add funds manually to Stripe and [pay out money](https://stripe.com/docs/connect/add-and-pay-out-guide).
 
 ![demo](.readme/screenshot.png)
 
